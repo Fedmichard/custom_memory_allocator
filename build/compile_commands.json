@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/custom_memory_allocator_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\custom_memory_allocator_cpp.dir\\src\\main.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\custom_memory_allocator\\src\\main.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/src/main.cpp",
+  "output": "CMakeFiles/custom_memory_allocator_cpp.dir/src/main.cpp.obj"
+}
+]
