@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = C:\Users\franc\Documents\Personal_Projects\custom_memory_allo
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/custom_memory_allocator_cpp.dir/all
+all: CMakeFiles/custom_memory_allocator_c.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/custom_memory_allocator_cpp.dir/clean
+clean: CMakeFiles/custom_memory_allocator_c.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/custom_memory_allocator_cpp.dir
+# Target rules for target CMakeFiles/custom_memory_allocator_c.dir
 
 # All Build rule for target.
-CMakeFiles/custom_memory_allocator_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_cpp.dir\build.make CMakeFiles/custom_memory_allocator_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_cpp.dir\build.make CMakeFiles/custom_memory_allocator_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\franc\Documents\Personal_Projects\custom_memory_allocator\build\CMakeFiles --progress-num=1,2 "Built target custom_memory_allocator_cpp"
-.PHONY : CMakeFiles/custom_memory_allocator_cpp.dir/all
+CMakeFiles/custom_memory_allocator_c.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\franc\Documents\Personal_Projects\custom_memory_allocator\build\CMakeFiles --progress-num=1,2 "Built target custom_memory_allocator_c"
+.PHONY : CMakeFiles/custom_memory_allocator_c.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/custom_memory_allocator_cpp.dir/rule: cmake_check_build_system
+CMakeFiles/custom_memory_allocator_c.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\franc\Documents\Personal_Projects\custom_memory_allocator\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/custom_memory_allocator_cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/custom_memory_allocator_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\franc\Documents\Personal_Projects\custom_memory_allocator\build\CMakeFiles 0
-.PHONY : CMakeFiles/custom_memory_allocator_cpp.dir/rule
+.PHONY : CMakeFiles/custom_memory_allocator_c.dir/rule
 
 # Convenience name for target.
-custom_memory_allocator_cpp: CMakeFiles/custom_memory_allocator_cpp.dir/rule
-.PHONY : custom_memory_allocator_cpp
+custom_memory_allocator_c: CMakeFiles/custom_memory_allocator_c.dir/rule
+.PHONY : custom_memory_allocator_c
 
 # clean rule for target.
-CMakeFiles/custom_memory_allocator_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_cpp.dir\build.make CMakeFiles/custom_memory_allocator_cpp.dir/clean
-.PHONY : CMakeFiles/custom_memory_allocator_cpp.dir/clean
+CMakeFiles/custom_memory_allocator_c.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/clean
+.PHONY : CMakeFiles/custom_memory_allocator_c.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

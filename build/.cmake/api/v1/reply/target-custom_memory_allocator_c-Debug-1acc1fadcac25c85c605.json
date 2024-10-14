@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "custom_memory_allocator_cpp.exe"
+			"path" : "custom_memory_allocator_c.exe"
 		},
 		{
-			"path" : "custom_memory_allocator_cpp.pdb"
+			"path" : "custom_memory_allocator_c.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -55,14 +55,14 @@
 					"path" : "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/includes"
 				}
 			],
-			"language" : "CXX",
+			"language" : "C",
 			"sourceIndexes" : 
 			[
 				0
 			]
 		}
 	],
-	"id" : "custom_memory_allocator_cpp::@6890427a1f51a3e7e1df",
+	"id" : "custom_memory_allocator_c::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -80,10 +80,10 @@
 				"role" : "libraries"
 			}
 		],
-		"language" : "CXX"
+		"language" : "C"
 	},
-	"name" : "custom_memory_allocator_cpp",
-	"nameOnDisk" : "custom_memory_allocator_cpp.exe",
+	"name" : "custom_memory_allocator_c",
+	"nameOnDisk" : "custom_memory_allocator_c.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -104,7 +104,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/main.cpp",
+			"path" : "src/main.c",
 			"sourceGroupIndex" : 0
 		}
 	],

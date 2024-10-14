@@ -891,7 +891,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "custom_memory_allocator_cpp"
+			"value" : "custom_memory_allocator_c"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1296,6 +1296,42 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
+		},
+		{
+			"name" : "custom_memory_allocator_c_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/build"
+		},
+		{
+			"name" : "custom_memory_allocator_c_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "custom_memory_allocator_c_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator"
 		},
 		{
 			"name" : "custom_memory_allocator_cpp_BINARY_DIR",

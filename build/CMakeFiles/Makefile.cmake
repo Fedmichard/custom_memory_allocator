@@ -49,5 +49,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/custom_memory_allocator_cpp.dir/DependInfo.cmake"
+  "CMakeFiles/custom_memory_allocator_c.dir/DependInfo.cmake"
   )

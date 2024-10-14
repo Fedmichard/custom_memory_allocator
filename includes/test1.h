@@ -1,14 +1,10 @@
 #ifndef TEST1_H
 #define TEST1_H
 
-#include <string>
-#include <iostream>
+#include <stdio.h>
 
-class Print {
-public:
-    Print (std::string str) {
-        std::cout << str << std::endl;
-    }
-};
+void print (char* str) {
+    printf(str);
+}
 
 #endif

@@ -116,41 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named custom_memory_allocator_cpp
+# Target rules for targets named custom_memory_allocator_c
 
 # Build rule for target.
-custom_memory_allocator_cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 custom_memory_allocator_cpp
-.PHONY : custom_memory_allocator_cpp
+custom_memory_allocator_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 custom_memory_allocator_c
+.PHONY : custom_memory_allocator_c
 
 # fast build rule for target.
-custom_memory_allocator_cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_cpp.dir\build.make CMakeFiles/custom_memory_allocator_cpp.dir/build
-.PHONY : custom_memory_allocator_cpp/fast
+custom_memory_allocator_c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/build
+.PHONY : custom_memory_allocator_c/fast
 
-src/main.obj: src/main.cpp.obj
+src/main.obj: src/main.c.obj
 .PHONY : src/main.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_cpp.dir\build.make CMakeFiles/custom_memory_allocator_cpp.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+src/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/main.c.obj
+.PHONY : src/main.c.obj
 
-src/main.i: src/main.cpp.i
+src/main.i: src/main.c.i
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_cpp.dir\build.make CMakeFiles/custom_memory_allocator_cpp.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-src/main.s: src/main.cpp.s
+src/main.s: src/main.c.s
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_cpp.dir\build.make CMakeFiles/custom_memory_allocator_cpp.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -160,7 +160,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... custom_memory_allocator_cpp
+	@echo ... custom_memory_allocator_c
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

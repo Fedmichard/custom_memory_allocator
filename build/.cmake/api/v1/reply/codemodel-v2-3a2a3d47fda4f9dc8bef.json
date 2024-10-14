@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "custom_memory_allocator_cpp",
+					"name" : "custom_memory_allocator_c",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "custom_memory_allocator_cpp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-custom_memory_allocator_cpp-Debug-4751e69c195831a2be77.json",
-					"name" : "custom_memory_allocator_cpp",
+					"id" : "custom_memory_allocator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_memory_allocator_c-Debug-1acc1fadcac25c85c605.json",
+					"name" : "custom_memory_allocator_c",
 					"projectIndex" : 0
 				}
 			]
