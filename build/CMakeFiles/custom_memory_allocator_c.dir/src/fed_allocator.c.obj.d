@@ -1,5 +1,5 @@
-CMakeFiles/custom_memory_allocator_c.dir/src/main.c.obj: \
- C:\Users\franc\Documents\Personal_Projects\custom_memory_allocator\src\main.c \
+CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj: \
+ C:\Users\franc\Documents\Personal_Projects\custom_memory_allocator\src\fed_allocator.c \
  C:/msys64/mingw64/include/stdio.h \
  C:/msys64/mingw64/include/corecrt_stdio_config.h \
  C:/msys64/mingw64/include/corecrt.h C:/msys64/mingw64/include/_mingw.h \
@@ -18,5 +18,4 @@ CMakeFiles/custom_memory_allocator_c.dir/src/main.c.obj: \
  C:/msys64/mingw64/include/sec_api/stdlib_s.h \
  C:/msys64/mingw64/include/malloc.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/mm_malloc.h \
- C:/msys64/mingw64/include/errno.h \
- C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/includes/fed_allocator.h
+ C:/msys64/mingw64/include/errno.h

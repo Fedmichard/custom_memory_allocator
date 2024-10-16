@@ -128,6 +128,30 @@ custom_memory_allocator_c/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/build
 .PHONY : custom_memory_allocator_c/fast
 
+src/fed_allocator.obj: src/fed_allocator.c.obj
+.PHONY : src/fed_allocator.obj
+
+# target to build an object file
+src/fed_allocator.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj
+.PHONY : src/fed_allocator.c.obj
+
+src/fed_allocator.i: src/fed_allocator.c.i
+.PHONY : src/fed_allocator.i
+
+# target to preprocess a source file
+src/fed_allocator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.i
+.PHONY : src/fed_allocator.c.i
+
+src/fed_allocator.s: src/fed_allocator.c.s
+.PHONY : src/fed_allocator.s
+
+# target to generate assembly for a file
+src/fed_allocator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.s
+.PHONY : src/fed_allocator.c.s
+
 src/main.obj: src/main.c.obj
 .PHONY : src/main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... custom_memory_allocator_c
+	@echo ... src/fed_allocator.obj
+	@echo ... src/fed_allocator.i
+	@echo ... src/fed_allocator.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

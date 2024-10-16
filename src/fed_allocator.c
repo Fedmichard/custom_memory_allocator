@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fed_allocator.h"
 
-int main () {
+int alloc () {
     printf("Hello World!\n");
 
     return 0;
