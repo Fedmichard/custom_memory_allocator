@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include "fed_allocator.h"
 
-int main () {
+int main() {
     printf("Hello World!\n");
+    fedAlloc();
 
     return 0;
 }

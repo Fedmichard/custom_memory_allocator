@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+#include "fed_allocator.h"
 
-int alloc () {
-    printf("Hello World!\n");
+struct HeapNode {
+    uint32_t size;
+};
 
-    return 0;
+void fedAlloc() {
+    printf("In Fed's Memory Allocator");
 }
