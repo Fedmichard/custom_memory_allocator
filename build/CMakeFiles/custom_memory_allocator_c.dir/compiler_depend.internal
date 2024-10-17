@@ -3,6 +3,7 @@
 
 CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj
  C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/src/fed_allocator.c
+ C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/includes/fed_allocator.h
  C:/msys64/mingw64/include/_mingw.h
  C:/msys64/mingw64/include/_mingw_mac.h
  C:/msys64/mingw64/include/_mingw_off_t.h

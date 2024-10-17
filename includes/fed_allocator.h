@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void fedAlloc();
+void heapInit();
+
+void* heapAlloc();
 
 #endif

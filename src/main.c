@@ -4,7 +4,5 @@
 
 int main() {
     printf("Hello World!\n");
-    fedAlloc();
-
     return 0;
 }
