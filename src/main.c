@@ -4,5 +4,6 @@
 
 int main() {
     printf("Hello World!\n");
+    heapInit();
     return 0;
 }

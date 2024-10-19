@@ -23,6 +23,11 @@ void heapInit() {
     heapStart->size = HEAP_TOTAL_SIZE - HEAP_NODE_SIZE;
     heapStart->next = NULL;
     heapStart->prev = NULL;
+
+    printf("Size: %zu\n", HEAP_TOTAL_SIZE);
+    printf("Size: %p\n", heapStart->next);
+    printf("Size: %p\n", MyHeapArea);
+    printf("Size: %p", (void*)heapStart);
 }
 
 // To Allocate new memory region, list is traversed and searched for best free memory
