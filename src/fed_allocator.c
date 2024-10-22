@@ -20,6 +20,7 @@ static MyHeapNode* heapStart = (MyHeapNode*)MyHeapArea; // Never Modified and wi
 // Initializing our heap by setting up the first node of the heap
 void heapInit() {
     heapStart = (MyHeapNode*)MyHeapArea;
+    // This size is solely used to tell how much is left to be used
     heapStart->size = HEAP_TOTAL_SIZE - HEAP_NODE_SIZE;
     heapStart->next = NULL;
     heapStart->prev = NULL;
@@ -159,6 +160,82 @@ void* heapRealloc(void* ptr, size_t size) {
             sizeToCopy = size;
         }
 
+        heapCopy(p, ptr, size);
+
+        heapFree(ptr);
 
     }
+
+    return p;
+}
+
+// instead of allocating a certain number of bytes randomly
+void* heapCalloc(size_t num, size_t size) {
+    void* p;
+    size_t sizeInBytes;
+
+    // calculate the actual memory size in bytes
+    sizeInBytes = num * size;
+
+    // allocate the memory block
+    p = heapAlloc(sizeInBytes);
+
+    // initialize memory block to zero
+    if (p) {
+        heapSet(p, 0, sizeInBytes);
+    }
+    
+    return p;
+}
+
+// ???
+void* heapSet(void* ptr, int value, size_t num) {
+    uint8_t* p = (uint8_t*) ptr;
+
+    while (num > 0) {
+        *p = value;
+        p++;
+        num--;
+    }
+
+    return ptr;
+}
+
+// ???
+void* heapCopy(void* dest, const void* source, size_t num) {
+    size_t i;
+    uint8_t* pDest = (uint8_t*) dest;
+    uint8_t* pSource = (uint8_t*) source;
+
+    for (i = 0; i < num; i++) {
+        pDest[i] = pSource[i];
+    }
+
+    return dest;
+}
+
+/********************************************************************************
+ * TESTING
+ * ******************************************************************************/
+static void printHeapHeader() {
+  printf("====================================================\n");
+  printf("Start of Heap: 0x%08X\n", (unsigned int)heapStart);
+  printf("Size of Heap : 0x%08X (%d)\n", HEAP_TOTAL_SIZE - HEAP_NODE_SIZE, HEAP_TOTAL_SIZE - HEAP_NODE_SIZE);
+  printf("====================================================\n");
+}
+
+void printHeap() {
+  MyHeapNode* currentHeapBlock;
+  printf("\n--------------------------------\n");
+  printf("Start\t\tUsed\tSize\t\t\tPrev\t\tNext\n");
+
+  currentHeapBlock = heapStart;
+  while (currentHeapBlock) {
+    printf("0x%08X\t0x%02X\t0x%08X (%d)\t0x%08X\t0x%08X \n", 
+      (unsigned int)currentHeapBlock, currentHeapBlock->used, currentHeapBlock->size, currentHeapBlock->size,
+      (unsigned int)currentHeapBlock->prev, (unsigned int)currentHeapBlock->next);
+
+    currentHeapBlock = currentHeapBlock->next;
+  }
+
 }

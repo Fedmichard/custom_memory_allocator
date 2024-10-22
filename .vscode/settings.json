@@ -63,6 +63,8 @@
         "text_encoding": "cpp",
         "variant": "cpp",
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "fed_allocator.h": "c",
+        "buddy_allocator.h": "c"
     }
 }
