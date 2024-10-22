@@ -23,16 +23,12 @@ void heapInit() {
     heapStart->size = HEAP_TOTAL_SIZE - HEAP_NODE_SIZE;
     heapStart->next = NULL;
     heapStart->prev = NULL;
-
-    printf("Size: %zu\n", HEAP_TOTAL_SIZE);
-    printf("Size: %p\n", heapStart->next);
-    printf("Size: %p\n", MyHeapArea);
-    printf("Size: %p", (void*)heapStart);
 }
 
 // To Allocate new memory region, list is traversed and searched for best free memory
 // (Best Fit)
 // Smallest available free block
+// malloc()
 void* heapAlloc(size_t size) {
     MyHeapNode* currentHeapBlock;
     MyHeapNode* bestHeapBlock;
@@ -41,7 +37,7 @@ void* heapAlloc(size_t size) {
     // Initialize current block to start of the heap
     currentHeapBlock = heapStart;
     // Initialize best heap block to nothing for now
-    bestHeapBlock = (MyHeapNode*)NULL;
+    bestHeapBlock = (MyHeapNode*)NULL; // No real reason to this since NULL will already defined as pointer constant
     // Initialize with an invalid size
     bestHeapBlockSize = HEAP_TOTAL_SIZE + 1;
 
@@ -58,7 +54,9 @@ void* heapAlloc(size_t size) {
         currentHeapBlock = currentHeapBlock->next;
     }
 
+    // If there was a best heap block found
     if (bestHeapBlock != NULL) {
+        // new pointer that will point to allocated block
         MyHeapNode* heapNodeAllocate;
 
         // Found a block that matches, split it and return the top of the memory area to the user
@@ -83,4 +81,84 @@ void* heapAlloc(size_t size) {
     }
     
     return NULL;
+}
+
+// free()
+// can take any data type pointer
+void heapFree(void* ptr) {
+    if (ptr == NULL) {
+        return;
+    }
+
+    /* get actual healp node */
+    MyHeapNode* currentNode = (MyHeapNode*)((unsigned char*)ptr - HEAP_NODE_SIZE);
+
+    // check if the current node exists in our stack, if it is null return
+    if (currentNode == NULL) {
+        return;
+    }
+
+    // set the current node to be "unused"
+    currentNode->used = 0;
+
+    // now check if we can merge with next block
+    // if the next node exists
+    if (currentNode->next) {
+        // if the next node isn't being used (== 0)
+        if (!currentNode->next->used) {
+            // add the size of the next block and its control data to current block
+            currentNode->size += currentNode->prev->size;
+            currentNode->size += HEAP_NODE_SIZE;
+
+            // remove the next block
+            // link current block to the next-next block
+            currentNode->next = currentNode->next->next;
+
+            // link next next block to current block if next next block exists
+            // current->next already points to next-next block
+            if (currentNode->next != NULL) {
+                currentNode->next->prev = currentNode;
+            }
+        }
+    }
+
+    //check if we can merge the previous block
+    if (currentNode->prev) {
+        // check if the previous block is being used
+        if (!currentNode->prev->used) {
+            // add size of freed memory region and its control data to previous block
+            currentNode->prev->size += currentNode->size;
+            currentNode->prev->size += HEAP_NODE_SIZE;
+
+            // remove freed block from list
+            // link previous block to next block
+            currentNode->prev->next = currentNode->next;
+        }
+    }
+}
+
+void* heapRealloc(void* ptr, size_t size) {
+    void* p;
+
+    // allocate new block of requested size
+    p = heapAlloc(size);
+    // if p == null
+    if (!p) {
+        return p; // return null in case of failure
+    }
+
+    // copy buffer of original block
+    if (ptr) {
+        size_t sizeToCopy;
+        size_t originalSize = ((MyHeapNode*)((unsigned char*)ptr - HEAP_NODE_SIZE))->size;
+
+        // copy data of original memory to new only
+        if (originalSize < size) {
+            sizeToCopy = originalSize;
+        } else {
+            sizeToCopy = size;
+        }
+
+
+    }
 }
