@@ -61,4 +61,6 @@ int main() {
         printf("Failed to Allocate\n");
     }
 
+    printHeap();
+
 }
