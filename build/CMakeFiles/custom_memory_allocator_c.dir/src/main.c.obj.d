@@ -23,4 +23,6 @@ CMakeFiles/custom_memory_allocator_c.dir/src/main.c.obj: \
  C:/msys64/mingw64/include/stdint.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h \
  C:/msys64/mingw64/include/stddef.h \
- C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/includes/fed_allocator.h
+ C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/includes/fed_allocator.h \
+ C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/includes/buddy_allocator.h \
+ C:/msys64/mingw64/include/math.h

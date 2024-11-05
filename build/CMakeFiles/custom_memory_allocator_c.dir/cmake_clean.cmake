@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.obj"
+  "CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.obj.d"
   "CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj"
   "CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj.d"
   "CMakeFiles/custom_memory_allocator_c.dir/src/main.c.obj"

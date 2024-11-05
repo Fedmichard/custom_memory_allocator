@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/src/buddy_allocator.c" "CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.obj" "gcc" "CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.obj.d"
   "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/src/fed_allocator.c" "CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj" "gcc" "CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj.d"
   "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/src/main.c" "CMakeFiles/custom_memory_allocator_c.dir/src/main.c.obj" "gcc" "CMakeFiles/custom_memory_allocator_c.dir/src/main.c.obj.d"
   )

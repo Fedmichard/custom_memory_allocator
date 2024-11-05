@@ -10,5 +10,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/custom_memory_allocator_c.dir/includes_C.rsp -g -o CMakeFiles\\custom_memory_allocator_c.dir\\src\\fed_allocator.c.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\custom_memory_allocator\\src\\fed_allocator.c",
   "file": "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/src/fed_allocator.c",
   "output": "CMakeFiles/custom_memory_allocator_c.dir/src/fed_allocator.c.obj"
+},
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/custom_memory_allocator_c.dir/includes_C.rsp -g -o CMakeFiles\\custom_memory_allocator_c.dir\\src\\buddy_allocator.c.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\custom_memory_allocator\\src\\buddy_allocator.c",
+  "file": "C:/Users/franc/Documents/Personal_Projects/custom_memory_allocator/src/buddy_allocator.c",
+  "output": "CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.obj"
 }
 ]

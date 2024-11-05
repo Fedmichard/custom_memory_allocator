@@ -128,6 +128,30 @@ custom_memory_allocator_c/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/build
 .PHONY : custom_memory_allocator_c/fast
 
+src/buddy_allocator.obj: src/buddy_allocator.c.obj
+.PHONY : src/buddy_allocator.obj
+
+# target to build an object file
+src/buddy_allocator.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.obj
+.PHONY : src/buddy_allocator.c.obj
+
+src/buddy_allocator.i: src/buddy_allocator.c.i
+.PHONY : src/buddy_allocator.i
+
+# target to preprocess a source file
+src/buddy_allocator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.i
+.PHONY : src/buddy_allocator.c.i
+
+src/buddy_allocator.s: src/buddy_allocator.c.s
+.PHONY : src/buddy_allocator.s
+
+# target to generate assembly for a file
+src/buddy_allocator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\custom_memory_allocator_c.dir\build.make CMakeFiles/custom_memory_allocator_c.dir/src/buddy_allocator.c.s
+.PHONY : src/buddy_allocator.c.s
+
 src/fed_allocator.obj: src/fed_allocator.c.obj
 .PHONY : src/fed_allocator.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... custom_memory_allocator_c
+	@echo ... src/buddy_allocator.obj
+	@echo ... src/buddy_allocator.i
+	@echo ... src/buddy_allocator.s
 	@echo ... src/fed_allocator.obj
 	@echo ... src/fed_allocator.i
 	@echo ... src/fed_allocator.s

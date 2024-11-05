@@ -1,27 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
 #include "fed_allocator.h"
 
 #define HEAP_NODE_SIZE sizeof(MyHeapNode) // Size of a single node in our heap
 #define HEAP_TOTAL_SIZE (4 * 1024) // Size of the entire size of heap (4kb which is typical size of Node)
 
+ // Alias to MyHeapNode (so I don't have to write struct each time I use it)
 typedef struct MyHeapNodeType {
-    uint32_t size; // Size of memory segment in bytes, without size of control data
+    // uint32_t size; | Size of memory segment in bytes, without size of control data
+    uint32_t size; // level of block, to indicate size 0 = 4096, 1 = 2048, 2 = 1024,
+                   // 3 = 512, 4 = 256, 5 = 128, 6 = 64, 7 = 32, 8 = 16, 9 = 8, 10 = 4, 11 = 2, 12 = 1
     uint8_t used; // (Size of Bool) Flag to track if memory block is being used
     struct MyHeapNodeType* next; // Pointer to next node in list
     struct MyHeapNodeType* prev; // Pointer to previous node in list
-} MyHeapNode; // Alias to MyHeapNode (so I don't have to write struct each time I use it)
+} MyHeapNode;
+
 
 // Static Means it can only be accessed within this file and its lifetime is throughout program duration
-static unsigned char MyHeapArea[HEAP_TOTAL_SIZE]; 
+static unsigned char MyHeapArea[HEAP_TOTAL_SIZE]; // static fixed size array that serves as the heap
 static MyHeapNode* heapStart = (MyHeapNode*)MyHeapArea; // Never Modified and will always point at start of heap list
 
 // Initializing our heap by setting up the first node of the heap
 void heapInit() {
     heapStart = (MyHeapNode*)MyHeapArea;
     // This size is solely used to tell how much is left to be used
-    heapStart->size = HEAP_TOTAL_SIZE - HEAP_NODE_SIZE;
+    heapStart->size = HEAP_TOTAL_SIZE - HEAP_NODE_SIZE; // (kept track of remaining size left available)
     heapStart->next = NULL;
     heapStart->prev = NULL;
 }
@@ -47,6 +48,11 @@ void* heapAlloc(size_t size) {
         if ( (!currentHeapBlock->used) &&
              (currentHeapBlock->size >= size + HEAP_NODE_SIZE) &&
              (currentHeapBlock->size <= bestHeapBlockSize)) {
+
+                printf("%zu\n", currentHeapBlock->size);
+                printf("%zu\n", size);
+                printf("%zu\n", HEAP_NODE_SIZE);
+                printf("%zu\n", size + HEAP_NODE_SIZE);
 
             bestHeapBlock = currentHeapBlock;
             bestHeapBlockSize = currentHeapBlock -> size;
@@ -213,6 +219,14 @@ void* heapCopy(void* dest, const void* source, size_t num) {
 
     return dest;
 }
+
+
+/*
+1. Divide all the memory in our heap into partitions
+2. Every single request for memory is k, and k has to be <= upper limit of memory (4096) and >= lower limit (0)
+
+*/
+
 
 /********************************************************************************
  * TESTING
