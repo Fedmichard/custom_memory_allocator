@@ -1,0 +1,10 @@
+^C:\USERS\FED\ONEDRIVE - FLORIDA GULF COAST UNIVERSITY\DOCUMENTS\1_PROJECTS\CUSTOM_MEMORY_ALLOCATOR\BUILD\CMAKEFILES\E2AE53FFBE6D8AB5B3644E9E803B74DD\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/Fed/OneDrive - Florida Gulf Coast University/Documents/1_Projects/custom_memory_allocator" "-BC:/Users/Fed/OneDrive - Florida Gulf Coast University/Documents/1_Projects/custom_memory_allocator/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Fed/OneDrive - Florida Gulf Coast University/Documents/1_Projects/custom_memory_allocator/build/custom_memory_allocator_c.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

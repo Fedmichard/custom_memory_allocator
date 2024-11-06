@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\franc\Documents\Personal_Projects\custom_memory_allocator\build\CMakeFiles\c466495f12349d2a05d7c8952e74ba2c\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\Fed\OneDrive - Florida Gulf Coast University\Documents\1_Projects\custom_memory_allocator\build\CMakeFiles\e2ae53ffbe6d8ab5b3644e9e803b74dd\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{893E7F28-8499-3463-916F-57FE39AA074C}</UniqueIdentifier>
+      <UniqueIdentifier>{55D18C3D-3F4C-31F5-95C4-E056AFCFAD36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

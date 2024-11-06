@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "fed_allocator.h"
 #include "buddy_allocator.h"
+#include "fed_allocator.h"
 
 int main() {
     /************************************************************
@@ -42,7 +42,7 @@ int main() {
 
     buddy_init();
 
-    buddy_alloc(2);
+    buddy_alloc(1000);
 
     print_heap();
 
