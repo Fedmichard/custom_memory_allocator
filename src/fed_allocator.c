@@ -13,7 +13,6 @@ typedef struct MyHeapNodeType {
     struct MyHeapNodeType* prev; // Pointer to previous node in list
 } MyHeapNode;
 
-
 // Static Means it can only be accessed within this file and its lifetime is throughout program duration
 static unsigned char MyHeapArea[HEAP_TOTAL_SIZE]; // static fixed size array that serves as the heap
 static MyHeapNode* heapStart = (MyHeapNode*)MyHeapArea; // Never Modified and will always point at start of heap list
@@ -34,6 +33,7 @@ void heapInit() {
 void* heapAlloc(size_t size) {
     MyHeapNode* currentHeapBlock;
     MyHeapNode* bestHeapBlock;
+    
     uint32_t bestHeapBlockSize;
 
     // Initialize current block to start of the heap
