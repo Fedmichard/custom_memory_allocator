@@ -1,1 +1,11 @@
-# custom_memory_allocator
+## custom memory allocators
+
+The overall purpose of this project was to learn overall memory management and memory management techniques and implement them using my own custom heap. To accomplish this goal 2 overall methods were used:
+
+# 1. Best fit
+
+The best-fit memory allocation technique approaches memory management by placing requests in the best possible free space of memory. It was designed using a doubly linked list data structure where each node has a pointer to the next and previous nodes, and also holds the size of the node allocated. Using a custom heap of 4096 bytes, which is just a contiguous array of size 4096 and each element holds a max 1 byte value. Initializing the heap takes about 21 bits (24 with memory alignment) and the starting node keeps track of the available memory space in total. Each subsequent node simply holds the requested size. The overall layout of this approach is recreating the standard C memory functions which is Malloc(), Realloc(), Calloc(), and free(). Within my free memory function I appropriately managed coalescing of memory by merging free blocks to it's previous or next node;
+
+# 2. Buddy System
+
+The buddy system approaches memory allocation and freeing differently, the heap is essentially divided into partitions of size 2^n where n represents a certain level. Typically this is defined using a tree data structure but in this example I use another doubly linked list. This makes it very simple to apply bit manipulation since bits are represented as powers of 2, we create a custom heap size of a multiple of 2 (in my case I used 4096 once again) and then I created a max level of 12 which represent 2^12. I then made the minimum value a user can allocate to bit a single bit which we will use later. We create 2 different structures in this approach, one is another doubly linked list and the other holds the properties of our actual buddy allocator. This structure holds information like a list of free memory spaces ranging from 0-12. As well as a memorys variable to keep track of the our allocators position in memory. From here our init function essentially checks the level of the requested size, so if 1000 bits were requested it would default to level 10 or 1024 bits. If the spot is already taken up it will try to go one level above and split that block into 1 less "level" essentially going from 2^11 to different 2^10 and 2^10. This is the approach that makes the buddy system super simple.
